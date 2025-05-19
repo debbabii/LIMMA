@@ -33,6 +33,10 @@ if(process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
     });
 } 
+
+app.listen (5000, () => {
+ console.log(`server is running on http://localhost:${PORT}`);
+connectDB();
 console.log(" Mounted routes:");
 app._router.stack
   .filter(layer => layer.route)
@@ -41,8 +45,5 @@ app._router.stack
     const methods = Object.keys(route.methods).map(m => m.toUpperCase()).join(",");
     console.log(`[${methods}] ${route.path}`);
   });
-app.listen (5000, () => {
- console.log(`server is running on http://localhost:${PORT}`);
-connectDB();
 });
 
