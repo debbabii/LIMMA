@@ -10,7 +10,7 @@ import paymentRoutes from "./routes/payment.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
 import path from "path";
 dotenv.config();
-console.log(" process.env.DEBUG_URL =", process.env.DEBUG_URL);
+//console.log(" process.env.DEBUG_URL =", process.env.DEBUG_URL);
 console.log(" process.env.CLIENT_URL =", process.env.CLIENT_URL);
 
 const app = express();
